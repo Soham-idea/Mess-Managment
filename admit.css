@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #fff;
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.80);
+    background-color: #009688;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+    padding-top: 30px;
+    font-size: 16px;
+    /* Added padding */
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #000;
+    transition: color 0.3s;
+    position: absolute;
+    top: 10px;
+    /* Adjusted position */
+    left: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"] {
+    width: calc(100% - 22px);
+    /* Adjusted width */
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+    transition: border-color 0.3s, color 0.3s;
+    position: relative;
+    z-index: 1;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #dff0ee;
+    color: #000;
+}
+
+/* Animation */
+.label-animation {
+    font-size: 12px;
+    background-color: #009688;
+    padding: 0 5px;
+    transition: font-size 0.3s, background-color 0.3s;
+    position: absolute;
+    top: -12px;
+    /* Adjusted position */
+    left: 10px;
+    z-index: 2;
+}
+
+.input-animation {
+    transition: padding-top 0.3s;
+}
+
+input:focus+.label-animation,
+input:not(:placeholder-shown)+.label-animation {
+    font-size: 14px;
+    background-color: #00796b;
+    top: -20px;
+}
+
+#button {
+    font-size: 16px;
+    max-width: 10%;
+}
+
+#sub {
+    font-size: 16px;
+}
+
+.custom-select {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-select select {
+    display: none;
+}
+
+.custom-select select+div::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #fff;
+    pointer-events: none;
+}
+
+.custom-select-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #009688;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+.custom-select-dropdown.open {
+    display: block;
+}
+
+.custom-select-dropdown option {
+    padding: 10px;
+}
+
+.custom-select-dropdown option:hover {
+    background-color: #00796b;
+}
